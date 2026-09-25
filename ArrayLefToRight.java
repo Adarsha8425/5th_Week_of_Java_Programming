@@ -41,38 +41,37 @@ public class ArrayLefToRight {
 
     static void printFromCenterTowardEnd(int [] arr)
     {
-        int left = 0;
-        int right = 0;
+        int left_index = 0;
+        int right_index = 0;
 
-        int result = arr.length / 2;
-        if(arr[result] % 2 == 0)
+        if(arr.length % 2 == 0)
         {
-           left = result - 1;
-           right = result;
-            while (left >= 0 && right <= arr.length) 
+           left_index = (arr.length / 2) - 1;
+           right_index = arr.length / 2;
+            while (left_index >= 0 && right_index <= arr.length) 
             {
-                System.out.print(arr[left] + "-->" + arr[right] + "-->");
-                left--;
-                right++;
+                System.out.print(arr[left_index] + "-->" + arr[right_index] + "-->");
+                left_index--;
+                right_index++;
             }
         }
         else
         {
-            left = result;
-            right = result;
+            left_index = arr.length / 2;
+            right_index = arr.length / 2;
 
-            while (left >= 0 && right <= arr.length) 
+            while (left_index >= 0 && right_index <= arr.length) 
             {
-                if(left == right)
+                if(left_index == right_index)
                 {
-                    System.out.print(arr[left] + "-->");
+                    System.out.print(arr[left_index] + "-->");
                 }
                 else
                 {
-                    System.out.print(arr[left] + "-->" + arr[right] + "-->");
+                    System.out.print(arr[left_index] + "-->" + arr[right_index] + "-->");
                 }
-                left--;
-                right++;
+                left_index--;
+                right_index++;
             }
         }
     }
@@ -80,14 +79,15 @@ public class ArrayLefToRight {
     public static void main(String[] args) 
     {
         int [] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11}; 
-        // printLeftToRight(arr);
-        // System.out.println();
+        printLeftToRight(arr);
+        System.out.println();
 
-        // printRightToLeft(arr);
-        // System.out.println();
-        // printFromTowardsLeftToRight(arr);
-
-        // System.out.println();
+        printRightToLeft(arr);
+        System.out.println();
+        
+        printFromTowardsLeftToRight(arr);
+        System.out.println();
+        
         printFromCenterTowardEnd(arr);
     }
 }
