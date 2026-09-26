@@ -28,7 +28,7 @@ public class DuplicatesExits {
 
         System.out.println("Enter " + numbers + " Element : ");
 
-        int array[] = new int[n];
+        int array[] = new int[numbers];
 
         for(int i = 0; i < array.length; i++)
         {
