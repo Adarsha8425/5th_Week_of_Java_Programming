@@ -6,7 +6,7 @@ public class DuplicatesExits {
     
     static String getDuplicatesAreExits(int[] array)
     {
-        for(int i = 0; i < array.length; i++)
+        for(int i = 0; i < array.length; i++) 
         {
             for(int j = i+1; j < array.length; j++)
             {
@@ -24,9 +24,9 @@ public class DuplicatesExits {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter The Size of Array: ");
 
-        int n = sc.nextInt();
+        int numbers = sc.nextInt();
 
-        System.out.println("Enter " + n + " Element : ");
+        System.out.println("Enter " + numbers + " Element : ");
 
         int array[] = new int[n];
 
