@@ -31,7 +31,7 @@ public class BinarySearch {
         int arr[] = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110};
         int key = 40;
         BinarySearch bs = new BinarySearch();
-
+        
         int result = bs.getBinaryValue(arr, key);
         System.out.println(result);
     }
